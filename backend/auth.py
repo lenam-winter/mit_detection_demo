@@ -145,3 +145,4 @@ def update_user_info(
 
     # Nếu đổi username → trả về tên mới
     return {"message": "Cập nhật thông tin thành công.", "new_username": update_data.get("username", username)}
+#code:end

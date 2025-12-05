@@ -44,7 +44,7 @@ async def predict_image(file: UploadFile, conf: float = 0.5):
             "confidence": conf_score,
             "class": label,
             "class_id": class_id,
-            "detection_id": str(uuid.uuid4())
+            "detection_id": str(uuid.uuid4())  
         })
 
     # tạo ảnh annotate
@@ -53,3 +53,4 @@ async def predict_image(file: UploadFile, conf: float = 0.5):
     annotated_b64 = encode_image_to_base64(annotated)
 
     return {"image": annotated_b64, "detections": detections}
+#code:end
