@@ -177,4 +177,4 @@ db = client["your_database_key_here"]
 
 ## 🧩 Giấy phép
 
-MIT License © 2025 — AgriVision Project Duy
+MIT License © 2025 — AgriVision Project Nam
