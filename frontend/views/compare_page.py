@@ -179,18 +179,18 @@ def show():
             story.append(Spacer(1, 6))
 
         story.append(Paragraph("<b>AgriVision – So sánh hiệu suất mô hình YOLOv8</b>", styles["Title"]))
-        story.append(Spacer(1, 8))
+        story.append(Spacer(1, 8))  
         story.append(Paragraph(f"Người dùng: {username}", styles["Normal"]))
-        story.append(Paragraph(f"Ngày tạo báo cáo: {datetime.now().strftime('%Y-%m-%d %H:%M')}", styles["Normal"]))
+        story.append(Paragraph(f"Ngày tạo báo cáo: {datetime.now().strftime('%Y-%m-%d %H:%M')}", styles["Normal"]))  
         story.append(Spacer(1, 14))
 
         data = [["Chỉ số", "YOLOv8n", "YOLOv8s"]] + [
             [m, f"{v8n[i]:.4f}", f"{v8s[i]:.4f}"]
-            for i, m in enumerate(["Precision", "Recall", "mAP50", "mAP50-95"])
+            for i, m in enumerate(["Precision", "Recall", "mAP50", "mAP50-95"])  
         ]
         table = Table(data, hAlign="CENTER", colWidths=[100, 100, 100])
         table.setStyle(TableStyle([
-            ("BACKGROUND", (0, 0), (-1, 0), rl_colors.HexColor("#C8E6C9")),
+            ("BACKGROUND", (0, 0), (-1, 0), rl_colors.HexColor("#C8E6C9")),  
             ("GRID", (0, 0), (-1, -1), 0.5, rl_colors.grey),
             ("FONTNAME", (0, 0), (-1, -1), font_main),
             ("ALIGN", (0, 0), (-1, -1), "CENTER"),

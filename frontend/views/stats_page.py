@@ -19,12 +19,12 @@ def show():
         st.info("Vui lòng chuyển sang tab **Đăng nhập** để tiếp tục.")
         st.stop()
 
-    username = st.session_state["user"]
+    username = st.session_state["user"]   
 
     # --- Kết nối MongoDB ---
     client = MongoClient(MONGO_URI)
     db = client["nam_db"]
-    logs_col = db["analysis_logs"]   # ✅ Đọc từ collection mới
+    logs_col = db["analysis_logs"]   # ✅ Đọc từ collection mới   
 
     st.markdown("## AgriVision – Thống kê & Theo dõi vườn mít")
     st.markdown("""

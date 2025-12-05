@@ -170,11 +170,11 @@ def show():
             status_placeholder = st.empty()
             status_placeholder.info("🤖 AgriVision đang phân tích dữ liệu từ hình ảnh, vui lòng chờ...")
             progress = st.progress(0)
-            for p in range(0, 100, 10):
+            for p in range(0, 100, 10):  
                 time.sleep(0.1)
-                progress.progress(p)
+                progress.progress(p)  
 
-            prompt = f"""
+            prompt = f"""  
                Bạn là hệ thống AgriVision — nền tảng AI ứng dụng YOLOv8 trong nhận dạng và phân loại độ chín trái mít.Sau mỗi lần xử lý hình ảnh, bạn sẽ tự động tạo Kết quả phân tích tổng hợp kết quả phân tích.  
                Dữ liệu đầu vào bạn vừa xử lý:
                counts={counts}, total={total}.
@@ -212,3 +212,5 @@ def show():
                 f"<div style='background-color:#FAFAFA; padding:15px; border-radius:10px; color:#212121;'>{ai_text}</div>",
                 unsafe_allow_html=True
             )
+
+# --- Kết thúc hàm show() ---

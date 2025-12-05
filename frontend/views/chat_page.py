@@ -17,17 +17,17 @@ def show():
 
     # --- Kết nối MongoDB ---
     load_dotenv()
-    MONGO_URI = os.getenv("MONGO_URI")
+    MONGO_URI = os.getenv("MONGO_URI")  
     try:
-        client = MongoClient(MONGO_URI)
+        client = MongoClient(MONGO_URI)  
         db = client["nam_db"]
-        chat_logs = db["chat_logs"]
+        chat_logs = db["chat_logs"]  
     except Exception as e:
-        st.warning(f"⚠️ Không thể kết nối MongoDB: {e}")
+        st.warning(f"⚠️ Không thể kết nối MongoDB: {e}")  
         st.stop()
 
     # --- Cấu hình Gemini ---
-    GEMINI_KEY = os.getenv("GEMINI_API_KEY")
+    GEMINI_KEY = os.getenv("GEMINI_API_KEY")  
     if GEMINI_KEY:
         try:
             genai.configure(api_key=GEMINI_KEY)

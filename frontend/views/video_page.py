@@ -16,8 +16,8 @@ GEMINI_KEY = os.getenv("GEMINI_API_KEY")
 
 if GEMINI_KEY:
     try:
-        genai.configure(api_key=GEMINI_KEY)
-    except Exception:
+        genai.configure(api_key=GEMINI_KEY)   
+    except Exception:   
         pass
 
 

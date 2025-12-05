@@ -179,3 +179,4 @@ def show():
         st.toast("Đã đăng xuất khỏi AgriVision!", icon="✅")
         time.sleep(2)
         st.rerun()
+    # --- Kết thúc hàm show() ---
